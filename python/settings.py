@@ -14,6 +14,8 @@ MONGO_DBNAME = environ.get('MONGO_DBNAME')
 
 JSON = True
 XML = False
+X_DOMAINS = '*'
+ITEM_METHODS = ['GET','PUT','PATCH']
 
 
 
@@ -28,6 +30,14 @@ reviews_schema = {
     "summary": {'type':'string'}, #"Heavenly Highway Hymns",
     "unixReviewTime": {'type':'integer'}, #1252800000,
     "reviewTime": {'type':'date'} #"09 13, 2009"
+    "requirement_type": {
+        'type':'string',
+        'allowed': [
+            'functional requirement',
+            'non-functional requirement',
+            'other'
+        ]
+    }
 }
 
 reviews_config = {
