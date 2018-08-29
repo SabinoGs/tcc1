@@ -29,7 +29,6 @@ reviews_schema = {
     "overall": {'type':'integer'}, #5.0,
     "summary": {'type':'string'}, #"Heavenly Highway Hymns",
     "unixReviewTime": {'type':'integer'}, #1252800000,
-    "reviewTime": {'type':'date'} #"09 13, 2009"
     "requirement_type": {
         'type':'string',
         'allowed': [
