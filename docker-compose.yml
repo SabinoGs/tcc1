@@ -8,16 +8,14 @@ services:
     ports:
       - 27017:27017
 
-  mongo_export:
-    image: mongo:latest
-    links:
-      - db
-    volumes:
-      - ./reviews:/seed-data
-    command:
-      'bash mongoexport --db test --collection reviews --out /seed-data/reviews_classified.json'
-
-
+        #  mongo_export:
+        #    image: mongo:latest
+        #    links:
+        #      - db
+        #    volumes:
+        #      - ./reviews:/seed-data
+        #
+        #
         #  mongo_seed:
         #    image: mongo:latest
         #    links:
@@ -25,4 +23,4 @@ services:
         #    volumes:
         #      - ./reviews:/seed-data
         #    command:
-        #      'bash -c "mongoimport --host db --type json --file /seed-data/reviews.json"'
+        #       'bash -c "mongoimport --host db -d test -c machine --type json --file /seed-data/p_comentarios_classificacao_automatica.json --jsonArray"'

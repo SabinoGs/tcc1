@@ -45,7 +45,28 @@ reviews_config = {
     'resource_methods': ['GET','POST']
 }
 
+machine_schema = {
+    'Predicao Intermediaria': {'type': 'string'},
+    'reviewText': {'type': 'string'},
+    'summary': {'type': 'string'},
+    "requirement_type": {
+        'type':'string',
+        'allowed': [
+            'functional requirement',
+            'non-functional requirement',
+            'other'
+        ]
+    }
+}
+
+machine_config = {
+    'schema':machine_schema,
+    'item_title':'Reviews Classificados',
+    'resource_methods': ['GET','POST']
+}
+
 
 DOMAIN = {
-    'reviews':reviews_config
+    'reviews':reviews_config,
+    'machine':machine_config
 }
